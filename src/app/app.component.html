@@ -9,5 +9,5 @@
 
  <!-- TODO: remove div -->
 <div *ngFor="let request of requestsService.getRequestList()">
-  <app-request-card  [request]="request"></app-request-card>
+  <app-request-card [request]="request" (requestDelete)="onRequestDelete($event)"></app-request-card>
 </div>

@@ -1,3 +1,16 @@
-<p>Project {{request.name}}</p>
-<p>User {{request.user}}</p>
-<p>Contrat {{request.contract}}</p>
+<div class="container">
+    <div class="data">
+        <p>Project {{request.name}}</p>
+        <p>User {{request.user}}</p>
+        <p>Contrat {{request.contract}}</p>
+    </div>
+    <div class="actions">
+        <button mat-icon-button [matMenuTriggerFor]="menu1">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu1="matMenu">
+          <button mat-menu-item>Edit</button>
+          <button mat-menu-item (click)="requestDelete.emit(request)">Delete</button>
+        </mat-menu>
+    </div>
+</div>
