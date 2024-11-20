@@ -36,4 +36,10 @@ export class AppComponent {
   onRequestDelete(request: Request): void {
     this.requestsService.removeRequest(request);
   }
+
+  onRequestEdit(request: Request): void {
+    this.dialog.open(DialogFormComponent, {
+      data: {request: request}
+    }); 
+  }
 }

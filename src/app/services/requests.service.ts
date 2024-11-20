@@ -6,7 +6,7 @@ import { Request } from '../app.component';
 })
 export class RequestsService {
   private requestList: WritableSignal<Request[]> = signal([{
-    name: '',
+    name: 'Project name',
     user: 'John Doe'}]);
 
   constructor() { }
@@ -26,5 +26,20 @@ export class RequestsService {
         req.user !== request.user ||
         req.contract !== request.contract
     ));
+  }
+
+  editRequest(oldRequest: Request, newRequest: Request): void {
+    this.requestList.update(list => {
+      const foundReq = list.find(req => 
+        req.name === oldRequest.name &&
+        req.user === oldRequest.user &&
+        req.contract === oldRequest.contract);
+      if(foundReq) {
+        foundReq.name = newRequest.name; 
+        foundReq.user = newRequest.user; 
+        foundReq.contract = newRequest.contract; 
+      }
+      return list;
+  })
   }
 }

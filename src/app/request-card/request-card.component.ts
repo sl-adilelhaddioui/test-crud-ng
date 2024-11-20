@@ -16,5 +16,6 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class RequestCardComponent {
   @Input({required: true}) request!: Request;
-  @Output() requestDelete = new EventEmitter<Request>(); // TODO type
+  @Output() requestDelete = new EventEmitter<Request>();
+  @Output() requestEdit = new EventEmitter<Request>();
 }
