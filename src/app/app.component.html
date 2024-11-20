@@ -1,12 +1,13 @@
 <div class="header">
   <h1>Liste des demandes</h1>
   <h2>Gérer les demandes d'autorisation de travaux.</h2>
-  <button mat-flat-button color="primary">
+  <button mat-flat-button color="primary" (click)="openDialog()">
     <mat-icon>add</mat-icon>
     Ajouter
   </button>
 </div>
 
-<app-request-card projectName="Projet" user="John Doe"></app-request-card>
-
-<!-- <request-card *ngFor="let request of requestList"></request-card> -->
+ <!-- TODO: remove div -->
+<div *ngFor="let request of requestsService.getRequestList()">
+  <app-request-card  [request]="request"></app-request-card>
+</div>

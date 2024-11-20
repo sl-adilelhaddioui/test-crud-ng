@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Request } from '../app.component';
 
 @Component({
   selector: 'app-request-card',
@@ -8,8 +9,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './request-card.component.scss'
 })
 export class RequestCardComponent {
-  @Input({required: true}) projectName!: string;
-  @Input({required: true}) user!: string;
-  @Input() contract!: number;
-
+  @Input({required: true}) request!: Request;
 }
