@@ -1,15 +1,13 @@
 <div class="header">
-  <h1>Liste des demandes</h1>
-  <h2>Gérer les demandes d'autorisation de travaux.</h2>
+  <div class="header-text">
+    <h1>Liste des demandes</h1>
+    <p>Gérer les demandes d'autorisation de travaux.</p>
+  </div>
   <button mat-flat-button color="primary" (click)="openDialog()">
     <mat-icon>add</mat-icon>
     Ajouter
   </button>
 </div>
 
- <!-- TODO: remove div -->
-<div *ngFor="let request of requestsService.getRequestList()">
-  <app-request-card [request]="request" 
-  (requestDelete)="onRequestDelete($event)"
-  (requestEdit)="onRequestEdit($event)"></app-request-card>
-</div>
+<app-request-card *ngFor="let request of requestsService.getRequestList()" [request]="request"
+  (requestDelete)="onRequestDelete($event)" (requestEdit)="onRequestEdit($event)"></app-request-card>

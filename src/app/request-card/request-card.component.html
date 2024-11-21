@@ -1,16 +1,23 @@
 <div class="container">
+    <div class="icon">
+        <img src="Ellipse_31.svg" alt="Ellipse" class="svg-bg">
+        <img src="Trace_286.svg" alt="Trace" class="svg-fg">
+    </div>
     <div class="data">
-        <p>Project {{request.name}}</p>
-        <p>User {{request.user}}</p>
-        <p>Contrat {{request.contract}}</p>
+        <span>Demande d'autorisation de travaux</span>
+        <div class="project-name">Projet de travaux {{request.name}}</div>
+        <div>
+            <span class="user">{{request.user}}</span>
+            <span *ngIf="request.contract" class="contract">Contrat {{request.contract}}</span>
+        </div>
     </div>
     <div class="actions">
         <button mat-icon-button [matMenuTriggerFor]="menu1">
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu1="matMenu">
-          <button mat-menu-item (click)="requestEdit.emit(request)">Edit</button>
-          <button mat-menu-item (click)="requestDelete.emit(request)">Delete</button>
+            <button mat-menu-item (click)="requestEdit.emit(request)">Edit</button>
+            <button mat-menu-item (click)="requestDelete.emit(request)">Delete</button>
         </mat-menu>
     </div>
 </div>

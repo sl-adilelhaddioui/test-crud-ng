@@ -1,5 +1,58 @@
 .container {
-    border: solid 1px black;
     display: flex;
-    justify-content: space-between;
+    gap: 12px;
+    box-shadow: 0px 8px 16px #4B556505;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    margin-top: 39px;
+    padding: 20px 13px 28px 16px;
+
+    .icon {
+        position: relative;
+        width: 48px;
+        height: 48px;
+
+        .svg-bg {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .svg-fg {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 17px;
+            height: 20px;
+        }
+    }
+
+    .data {
+        .project-name {
+            margin-bottom: 1rem;
+        }
+
+        .user {
+            background: #364152 0% 0% no-repeat padding-box;
+            border-radius: 6px;
+            color: #FCFCFD;
+            padding: 4px 12px;
+        }
+
+        .contract {
+            background: #EEF2F6 0% 0% no-repeat padding-box;
+            border-radius: 6px;
+            padding: 4px 12px;
+            color: #363F72;
+            margin-left: 8px;
+        }
+    }
+
+    .actions {
+        margin-left: auto;
+    }
+
 }
