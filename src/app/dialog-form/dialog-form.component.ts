@@ -4,7 +4,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RequestsService } from '../services/requests.service';
 
 @Component({
@@ -21,7 +20,7 @@ import { RequestsService } from '../services/requests.service';
   styleUrl: './dialog-form.component.scss'
 })
 export class DialogFormComponent {
-  private fb = inject(FormBuilder); 
+  private fb = inject(FormBuilder);
   private dialogRef = inject(MatDialogRef<DialogFormComponent>); // Inject MatDialogRef to close the dialog
   form!: FormGroup;
   private requestsService = inject(RequestsService);
@@ -36,15 +35,15 @@ export class DialogFormComponent {
   }
 
   onSubmit(): void {
-    if(this.data) {
+    if (this.data) {
       this.requestsService.editRequest(this.data.request, this.form.value);
     } else {
       this.requestsService.addRequest(this.form.value);
     }
-    this.dialogRef.close(); 
+    this.dialogRef.close();
   }
 
   onClose(): void {
-    this.dialogRef.close(); 
+    this.dialogRef.close();
   }
 }

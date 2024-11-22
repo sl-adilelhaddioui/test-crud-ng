@@ -10,8 +10,6 @@ export class RequestsService {
     user: 'John Doe'
   }]);
 
-  constructor() { }
-
   getRequestList(): Request[] {
     return this.requestList();
   }
