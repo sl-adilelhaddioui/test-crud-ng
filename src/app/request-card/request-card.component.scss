@@ -31,8 +31,15 @@
     }
 
     .data {
+        .title {
+            color: #4B5565;
+        }
+
         .project-name {
             margin-bottom: 1rem;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
         }
 
         .user {

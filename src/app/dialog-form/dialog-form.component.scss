@@ -1,3 +1,8 @@
+h2 {
+    color: #121926;
+    font-family: 'Poppins', sans-serif;
+}
+
 mat-dialog-content {
     display: flex;
     flex-direction: column;
@@ -5,5 +10,5 @@ mat-dialog-content {
 
 mat-dialog-actions {
     justify-content: space-between;
-    padding: 8px 24px;
+    padding: 24px;
 }
