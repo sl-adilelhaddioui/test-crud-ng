@@ -12,12 +12,12 @@
         </div>
     </div>
     <div class="actions">
-        <button mat-icon-button [matMenuTriggerFor]="menu1">
+        <button mat-icon-button [matMenuTriggerFor]="menu1" class="trigger-btn">
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu1="matMenu">
-            <button mat-menu-item (click)="requestEdit.emit(request)">Modifier</button>
-            <button mat-menu-item (click)="requestDelete.emit(request)">Supprimer</button>
+            <button mat-menu-item (click)="requestEdit.emit(request)" class="edit-btn">Modifier</button>
+            <button mat-menu-item (click)="requestDelete.emit(request)" class="delete-btn">Supprimer</button>
         </mat-menu>
     </div>
 </div>
