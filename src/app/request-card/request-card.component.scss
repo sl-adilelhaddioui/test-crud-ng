@@ -1,4 +1,4 @@
-.container {
+.request-card {
     display: flex;
     gap: 12px;
     box-shadow: 0px 8px 16px #4B556505;
@@ -7,19 +7,19 @@
     margin-top: 39px;
     padding: 20px 13px 28px 16px;
 
-    .icon {
+    &__icon {
         position: relative;
         width: 48px;
         height: 48px;
 
-        .svg-bg {
+        &-bg {
             position: absolute;
             z-index: 1;
             width: 100%;
             height: 100%;
         }
 
-        .svg-fg {
+        &-fg {
             position: absolute;
             z-index: 2;
             top: 50%;
@@ -30,50 +30,48 @@
         }
     }
 
-    .data {
-        .title {
-            color: #4B5565;
-        }
-
-        .project-name {
-            margin-bottom: 1rem;
-            font-weight: bold;
-            font-size: 16px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .user {
-            background: #364152 0% 0% no-repeat padding-box;
-            border-radius: 6px;
-            color: #FCFCFD;
-            padding: 4px 12px;
-        }
-
-        .contract {
-            background: #EEF2F6 0% 0% no-repeat padding-box;
-            border-radius: 6px;
-            padding: 4px 12px;
-            color: #363F72;
-            margin-left: 8px;
-        }
+    &__title {
+        color: #4B5565;
     }
 
-    .actions {
+    &__project-name {
+        margin-bottom: 1rem;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    &__user {
+        background: #364152 0% 0% no-repeat padding-box;
+        border-radius: 6px;
+        color: #FCFCFD;
+        padding: 4px 12px;
+    }
+
+    &__contract {
+        background: #EEF2F6 0% 0% no-repeat padding-box;
+        border-radius: 6px;
+        padding: 4px 12px;
+        color: #363F72;
+        margin-left: 8px;
+    }
+
+    &__actions {
         margin-left: auto;
         display: flex;
 
-        .status {
-            background: #FEF0C7 0% 0% no-repeat padding-box;
-            border-radius: 14px;
-            color: #DC6803;
-            padding: 7px 21px;
-            margin-right: 11px;
-            height: fit-content;
-        }
-
-        .trigger-btn {
-            margin-top: -12px;
-        }
     }
 
+    &__status {
+        background: #FEF0C7 0% 0% no-repeat padding-box;
+        border-radius: 14px;
+        color: #DC6803;
+        padding: 7px 21px;
+        margin-right: 11px;
+        height: fit-content;
+    }
+
+    &__trigger-btn {
+        margin-top: -12px;
+    }
 }
