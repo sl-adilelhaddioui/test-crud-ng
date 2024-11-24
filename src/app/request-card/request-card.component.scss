@@ -60,6 +60,20 @@
 
     .actions {
         margin-left: auto;
+        display: flex;
+
+        .status {
+            background: #FEF0C7 0% 0% no-repeat padding-box;
+            border-radius: 14px;
+            color: #DC6803;
+            padding: 7px 21px;
+            margin-right: 11px;
+            height: fit-content;
+        }
+
+        .trigger-btn {
+            margin-top: -12px;
+        }
     }
 
 }
