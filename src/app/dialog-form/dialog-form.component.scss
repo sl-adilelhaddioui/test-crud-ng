@@ -1,14 +1,16 @@
-h2 {
-    color: #121926;
-    font-family: 'Poppins', sans-serif;
-}
+.dialog {
+    &__title {
+        color: #121926;
+        font-family: 'Poppins', sans-serif;
+    }
 
-mat-dialog-content {
-    display: flex;
-    flex-direction: column;
-}
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
 
-mat-dialog-actions {
-    justify-content: space-between;
-    padding: 24px;
+    &__actions {
+        justify-content: space-between;
+        padding: 24px;
+    }
 }

@@ -3,21 +3,17 @@
     align-items: center;
     justify-content: space-between;
 
-    .title {
+    &__title {
         font-family: 'Poppins', sans-serif;
         margin-bottom: 6px;
         font-size: 20px;
     }
 
-    .subtitle {
+    &__subtitle {
         color: #4B5565;
     }
 
-    .mdc-button {
+    &__add-btn {
         font-family: 'Inter', sans-serif;
     }
-}
-
-app-request-card {
-    margin-top: 39px;
 }
