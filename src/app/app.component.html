@@ -9,5 +9,5 @@
   </button>
 </div>
 
-<app-request-card *ngFor="let request of requestsService.getRequestList()" [request]="request"
-  (requestDelete)="onRequestDelete($event)" (requestEdit)="onRequestEdit($event)"></app-request-card>
+<app-request-card *ngFor="let request of requests" [request]="request" (requestDelete)="onRequestDelete($event)"
+  (requestEdit)="onRequestEdit($event)"></app-request-card>

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,20 +17,27 @@ export interface Request {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, 
+  imports: [RouterOutlet,
     CommonModule,
-    MatButtonModule, 
-    MatIconModule, 
+    MatButtonModule,
+    MatIconModule,
     RequestCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   private dialog = inject(MatDialog);
-  public requestsService= inject(RequestsService); // TODO: private
+  private requestsService = inject(RequestsService);
+  requests: Request[] = [];
+
+  constructor() {
+    effect(() => {
+      this.requests = this.requestsService.getRequestList();
+    });
+  }
 
   openDialog(): void {
-    this.dialog.open(DialogFormComponent); 
+    this.dialog.open(DialogFormComponent);
   }
 
   onRequestDelete(request: Request): void {
@@ -39,7 +46,7 @@ export class AppComponent {
 
   onRequestEdit(request: Request): void {
     this.dialog.open(DialogFormComponent, {
-      data: {request: request}
-    }); 
+      data: { request: request }
+    });
   }
 }
