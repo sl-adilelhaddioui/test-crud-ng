@@ -51,10 +51,10 @@ describe('RequestCardComponent', () => {
     spyOn(component.requestDelete, 'emit');
 
     // Find and trigger the delete button/menu option
-    const triggerButton = fixture.debugElement.query(By.css('.trigger-btn'));    // Adjust selector as per your template
+    const triggerButton = fixture.debugElement.query(By.css('.request-card__trigger-btn'));    // Adjust selector as per your template
     triggerButton.triggerEventHandler('click', null);
 
-    const deleteButton = fixture.debugElement.query(By.css('.delete-btn')); // Adjust selector as per your template
+    const deleteButton = fixture.debugElement.query(By.css('.request-card__delete-btn')); // Adjust selector as per your template
     deleteButton.triggerEventHandler('click', null);
 
     expect(component.requestDelete.emit).toHaveBeenCalledWith(mockRequest);
@@ -64,10 +64,10 @@ describe('RequestCardComponent', () => {
     spyOn(component.requestEdit, 'emit');
 
     // Find and trigger the edit button/menu option
-    const triggerButton = fixture.debugElement.query(By.css('.trigger-btn'));    // Adjust selector as per your template
+    const triggerButton = fixture.debugElement.query(By.css('.request-card__trigger-btn'));    // Adjust selector as per your template
     triggerButton.triggerEventHandler('click', null);
 
-    const editButton = fixture.debugElement.query(By.css('.edit-btn')); // Adjust selector as per your template
+    const editButton = fixture.debugElement.query(By.css('.request-card__edit-btn')); // Adjust selector as per your template
     editButton.triggerEventHandler('click', null);
 
     expect(component.requestEdit.emit).toHaveBeenCalledWith(mockRequest);
