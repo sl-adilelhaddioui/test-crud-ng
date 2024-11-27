@@ -2,6 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
 
     &__title {
         font-family: 'Poppins', sans-serif;
@@ -15,5 +17,6 @@
 
     &__add-btn {
         font-family: 'Inter', sans-serif;
+        min-width: 110px;
     }
 }
