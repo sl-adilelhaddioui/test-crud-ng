@@ -40,8 +40,8 @@ export class AppComponent {
     this.dialog.open(DialogFormComponent);
   }
 
-  onRequestDelete(request: Request): void {
-    this.requestsService.removeRequest(request);
+  onRequestDelete(requestIndex: number): void {
+    this.requestsService.removeRequest(requestIndex);
   }
 
   onRequestEdit(request: Request): void {

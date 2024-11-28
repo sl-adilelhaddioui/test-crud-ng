@@ -18,13 +18,8 @@ export class RequestsService {
     this.requestList.update(value => [...value, request]);
   }
 
-  removeRequest(request: Request): void {
-    this.requestList.update(value => value.filter(
-      req =>
-        req.name !== request.name ||
-        req.user !== request.user ||
-        req.contract !== request.contract
-    ));
+  removeRequest(requestIndex: number): void {
+    this.requestList().splice(requestIndex, 1);
   }
 
   editRequest(oldRequest: Request, newRequest: Request): void {

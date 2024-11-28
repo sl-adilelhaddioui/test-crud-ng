@@ -18,8 +18,7 @@
         </button>
         <mat-menu #menu1="matMenu">
             <button mat-menu-item (click)="requestEdit.emit(request)" class="request-card__edit-btn">Modifier</button>
-            <button mat-menu-item (click)="requestDelete.emit(request)"
-                class="request-card__delete-btn">Supprimer</button>
+            <button mat-menu-item (click)="requestDelete.emit()" class="request-card__delete-btn">Supprimer</button>
         </mat-menu>
     </div>
 </div>

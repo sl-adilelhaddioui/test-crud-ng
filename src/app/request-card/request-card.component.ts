@@ -18,6 +18,6 @@ import { CommonModule } from '@angular/common';
 })
 export class RequestCardComponent {
   @Input({ required: true }) request!: Request;
-  @Output() requestDelete = new EventEmitter<Request>();
+  @Output() requestDelete = new EventEmitter();
   @Output() requestEdit = new EventEmitter<Request>();
 }
