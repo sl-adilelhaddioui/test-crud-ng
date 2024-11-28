@@ -10,4 +10,4 @@
 </div>
 
 <app-request-card *ngFor="let request of requests; let i=index" [request]="request" (requestDelete)="onRequestDelete(i)"
-  (requestEdit)="onRequestEdit($event)"></app-request-card>
+  (requestEdit)="onRequestEdit($event, i)"></app-request-card>

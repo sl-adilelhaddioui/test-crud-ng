@@ -44,9 +44,9 @@ export class AppComponent {
     this.requestsService.removeRequest(requestIndex);
   }
 
-  onRequestEdit(request: Request): void {
+  onRequestEdit(request: Request, requestIndex: number): void {
     this.dialog.open(DialogFormComponent, {
-      data: { request: request }
+      data: { request: request, index: requestIndex }
     });
   }
 }

@@ -36,7 +36,7 @@ export class DialogFormComponent {
 
   onSubmit(): void {
     if (this.data) {
-      this.requestsService.editRequest(this.data.request, this.form.value);
+      this.requestsService.editRequest(this.form.value, this.data.index);
     } else {
       this.requestsService.addRequest(this.form.value);
     }

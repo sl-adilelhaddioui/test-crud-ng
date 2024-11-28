@@ -22,18 +22,7 @@ export class RequestsService {
     this.requestList().splice(requestIndex, 1);
   }
 
-  editRequest(oldRequest: Request, newRequest: Request): void {
-    this.requestList.update(list => {
-      const foundReq = list.find(req =>
-        req.name === oldRequest.name &&
-        req.user === oldRequest.user &&
-        req.contract === oldRequest.contract);
-      if (foundReq) {
-        foundReq.name = newRequest.name;
-        foundReq.user = newRequest.user;
-        foundReq.contract = newRequest.contract;
-      }
-      return list;
-    })
+  editRequest(newRequest: Request, requestIndex: number): void {
+    this.requestList().splice(requestIndex, 1, newRequest);
   }
 }
